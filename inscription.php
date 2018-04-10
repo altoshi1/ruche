@@ -8,7 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="css_ruche.css" rel="stylesheet" type="text/css"/>
-        <link rel="icon" type="image/png" href="https://icon-icons.com/icons2/881/PNG/512/Honey_icon-icons.com_68739.png" />
+        <link rel="icon" type="image/png" href="//icon-icons.com/icons2/881/PNG/512/Honey_icon-icons.com_68739.png" />
+
 </head>
 
 <body>
@@ -59,54 +60,83 @@
         <br>
                      <center><img class="miel" src="image/honey.png" alt=""/></center>
 
-        <h1>Connexion</h1>
-        <br><br>
-            
+        <h1>Inscription
+        <small> <br/><br/>Merci de renseigner vos informations </small></h1>
+        <br>
+      
+        
 <div class="contenu text-left"> 
-            
-    <form class="form-horizontal" action="./authentification/auth.php" method="POST">
-        <div class="form-group">
-            <label class="control-label col-sm-5" for="usr">Nom d'utilisateur :</label>
-                <div class="col-sm-3">
-                <input name="login" type="text" class="form-control" id="usr" placeholder="Entrez votre nom d'utilisateur">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-5" for="pwd">Mot de passe:</label>
-                <div class="col-sm-3">
-                <input name="mdp" type="password" class="form-control" id="pwd" placeholder="Entrez votre mot de passe">
-            </div>
-        </div>
     
-        <div class="form-group">
-                <div class="col-sm-offset-5 col-sm-3">
-                <button name="bouton1"type="submit" class="btn btn-default">Se connecter</button>
+<form class="form-horizontal" action="./authentification/postInscription.php" method="POST">
+    <br/>
+    <div class="row">
+        <div class="col-md-offset-3 col-md-3">
+            <div class="form-group">
+            <label for="Nom">Nom</label>
+            <input type="text" class="form-control" id="nom" placeholder="Nom">
             </div>
         </div>
-    <br>
-        <div class="col-sm-offset-7 col-sm-5">
-                <div class="">
-                <a href="inscription.php" >Inscription</a>
+        
+        <div class="col-md-offset-1 col-md-3">
+            <div class="form-group">
+            <label for="Prenom">Prénom</label>
+            <input type="text" class="form-control" id="prenom" placeholder="Prénom">
             </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-offset-3 col-md-7">
+            <div class="form-group">
+            <label for="Email">Adresse e-mail</label>
+            <input type="text" class="form-control" id="email" placeholder="Entrez votre adresse e-mail">
             </div>
-    </form> 
-         
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-offset-3 col-md-3">
+            <div class="form-group">
+            <label for="user">Nom d'utilisateur</label>
+            <input type="text" class="form-control" id="user" placeholder="Nom d'utilisateur">
+            </div>
+        </div>
+
+        <div class="col-md-offset-1 col-md-3">
+            <div class="form-group">
+            <label for="Password">Mot de passe</label>
+            <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-offset-3 col-md-3">
+            <div class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-earphone"></span>
+            <input type="text" class="form-control" placeholder="Téléphone" aria-describedby="basic-addon1">
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-3">
+            <button name="boutonInscription"type="submit" class="btn btn-default">Envoyer mes informations</button>
+        </div>
+    </div>
+</form> 
 </div>
 </div>
     <div class="col-sm-1 sidenav"></div>
 </div>
 </div>
 
-
-    
                 <footer>
                                 <div class="container text-center">
                                 <h4>Ruche connectée 2018 Toshi</h4>
                                 </div>
                 </footer>
 
-
 </body>
 </html>
-
-

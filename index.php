@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Ruche Conectée</title>
+    <title>Ruche Connectée</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -43,9 +43,9 @@
                    <li ><a id="corpsPage" href="index.php">Accueil</a></li>
                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Ruche <span class="caret"></span></a>
                     <ul class="dropdown-menu" >
-                    <li><a href="#">Ruche 1</a></li>
-                    <li><a href="#">Ruche 2</a></li>
-                    <li><a href="#">Ruche 3</a></li>
+                        <li><a href="choixRuche.php">Ruche 1</a></li>
+                        <li><a href="choixRuche.php">Ruche 2</a></li>
+                        <li><a href="choixRuche.php">Ruche 3</a></li>
                     </ul>
                 </ul>
                 
@@ -75,22 +75,18 @@
     </div>
       
 </div>
-
-<div class="col-sm-1 sidenav"></div>
+    <div class="col-sm-1 sidenav"></div>
 </div>
 </div>
 
 
     
-    
-    
-    
-    
-<footer>
-  <div class="container text-center">
-  <h4>Ruche connectée 2018 Toshi</h4>
-  </div>
-</footer>
+                <footer>
+                                <div class="container text-center">
+                                <h4>Ruche connectée 2018 Toshi</h4>
+                                </div>
+                </footer>
+
 
 </body>
 </html>
