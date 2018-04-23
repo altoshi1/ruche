@@ -73,14 +73,14 @@
         <div class="col-md-offset-3 col-md-3">
             <div class="form-group">
             <label for="Nom">Nom</label>
-            <input type="text" class="form-control" id="nom" placeholder="Nom">
+            <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" required>
             </div>
         </div>
         
         <div class="col-md-offset-1 col-md-3">
             <div class="form-group">
             <label for="Prenom">Prénom</label>
-            <input type="text" class="form-control" id="prenom" placeholder="Prénom">
+            <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" required>
             </div>
         </div>
     </div>
@@ -89,7 +89,7 @@
         <div class="col-md-offset-3 col-md-7">
             <div class="form-group">
             <label for="Email">Adresse e-mail</label>
-            <input type="text" class="form-control" id="email" placeholder="Entrez votre adresse e-mail">
+            <input type="mail" class="form-control" id="email" name="email" placeholder="Entrez votre adresse e-mail" required>
             </div>
         </div>
     </div>
@@ -99,14 +99,14 @@
         <div class="col-md-offset-3 col-md-3">
             <div class="form-group">
             <label for="user">Nom d'utilisateur</label>
-            <input type="text" class="form-control" id="user" placeholder="Nom d'utilisateur">
+            <input type="text" class="form-control" id="user" name="user" placeholder="Nom d'utilisateur" required>
             </div>
         </div>
 
         <div class="col-md-offset-1 col-md-3">
             <div class="form-group">
             <label for="Password">Mot de passe</label>
-            <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" required>
             </div>
         </div>
     </div>
@@ -115,14 +115,14 @@
         <div class="col-md-offset-3 col-md-3">
             <div class="input-group">
             <span class="input-group-addon glyphicon glyphicon-earphone"></span>
-            <input type="text" class="form-control" placeholder="Téléphone" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" name="telephone" placeholder="Téléphone" aria-describedby="basic-addon1">
             </div>
         </div>
     </div>
     <br/><br/>
     <div class="form-group">
         <div class="col-sm-offset-5 col-sm-3">
-            <button name="boutonInscription"type="submit" class="btn btn-default">Envoyer mes informations</button>
+            <button name="boutonInscription" type="submit" class="btn btn-default">Envoyer mes informations</button>
         </div>
     </div>
 </form> 

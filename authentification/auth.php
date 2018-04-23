@@ -46,7 +46,7 @@ try {
 
 // vérification des identifiants login et mdp par rapport à ceux enregistrés dans la base
 if (!($_POST['login']==$ligne_rep['login'] && $_POST['mdp']==$ligne_rep['mdp'])){
-  header("Location: ../connexion.php?&erreur=Incorrectes! Vérifiez vos identifiant et mot de passe.");
+  header("Location: ../connexion.php?&erreur=Incorrect ! Vérifiez votre identifiant et mot de passe.");
   
   exit();
 }

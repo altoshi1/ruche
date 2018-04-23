@@ -1,3 +1,14 @@
+<?php
+//---------------------------------------------------------------------
+// Page protégée pour l'apiculteur
+// 
+//---------------------------------------------------------------------
+include "authentification/authcheck.php" ;
+   // Vérification des droits pour cette page uniquement les apiculteurs droit=1
+   if ($_SESSION['droits']<>'1') { header("Location: index.php");};
+   
+?>   
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +61,7 @@
                 </ul>
                 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="connexion.php"><span class="glyphicon glyphicon-log-in"></span> Déconnexion</a></li>
+                    <li><a href="authentification/deconnexion.php"><span class="glyphicon glyphicon-log-in"></span> Déconnexion</a></li>
                  
                 </ul>
             </div>
@@ -59,14 +70,86 @@
         <br>
                      <center><img class="miel" src="image/honey.png" alt=""/></center>
 
-        <h1>Vous êtes actuellement Connecté</h1>
-        <br><br>
+        <h1>Vous êtes actuellement Connecté</h1><br>
+
+        <div class="col-sm-offset-1 col-sm-10">
+        <ul class="nav nav-tabs">        
+            <button data-toggle="tab" name="boutonRuches" type="submit" class="btn btn-default" href="#home">Vos ruches</button></li>
+            <button data-toggle="tab" name="boutonCreer" type="submit" class="btn btn-default" href="#menu1">Créer une ruche</button></li>
+            <button data-toggle="tab" name="boutonInfos" type="submit" class="btn btn-default" href="#menu2">Informations personnelles</button></li>
+            <button data-toggle="tab" name="boutonAdmin" type="submit" class="btn btn-default" href="#menu3">Administration</button></li>
+        </ul>
+        </div>
+
+<br><br>
+ <div class="tab-content">
+<div id="home" class="tab-pane fade in active">
+        <h3>Ruches</h3>     <br>
+        <div class="contenu text-left">        
+            <!--RUCHES -->
+
+
+              
+                 Ruche 1
+                 Ruche 2
+                  <br>
+              </div>       
+
+
+            <!--RUCHES -->  
+    </div>
+     
+<div id="menu1" class="tab-pane fade">
+        <h3>Création d'une nouvelle ruche</h3>      <br>
+        <div class="contenu text-left"> 
+
+            <!--CREER -->
+
+
             
-<div class="contenu text-left"> 
-            
+               <button> Créer un Nouvelle ruche </button>
+                <br>
+            </div>       
+
+
+            <!--CREER -->
+    </div>
+     
+     
+<div id="menu2" class="tab-pane fade">
+        <h3>Informations personnelles</h3><br>
+        <div class="contenu text-left"> 
+            <!--INFOS -->
+
+    Nom : <br>
+    Prénom : <br>
+    Adresse e-mail : <br>
+                
+                    <?php echo var_dump($_SESSION); ?>
+                    <br>
+                </div>       
+
+
+            <!--INFOS -->
+     </div> 
     
-         
-</div>
+<div id="menu3" class="tab-pane fade">
+        <h3>Administration</h3><br>
+        <div class="contenu text-left"> 
+
+            <!--ADMINISTRATION -->
+
+
+           
+              Créer un compte 
+               <br>
+           </div>       
+
+
+           <!--ADMINISTRATION --> 
+
+    </div>
+  </div>
 </div>
     <div class="col-sm-1 sidenav"></div>
 </div>

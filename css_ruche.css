@@ -35,6 +35,7 @@ body {
     }
     
 .iconFleche{
+        
 display: block;
 margin-left: auto;
 margin-right: auto;
@@ -50,14 +51,7 @@ margin-right: auto;
 width: 60px;
 padding-top: 0px;
     }
-    .inscriptionIcon{
-        
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 100px;
-padding-top: 0px;
-    }
+   
     
   
     
@@ -96,7 +90,7 @@ padding-top: 0px;
 
                 .numColor {
                     
-                    color : orange;
+                    color : #DF7401;
                     
                 }
 

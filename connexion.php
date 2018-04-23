@@ -50,8 +50,7 @@
                 </ul>
                 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="connexion.php"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
-                 
+                    <li><a href="connexion.php"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>                 
                 </ul>
             </div>
             </div>
@@ -63,21 +62,22 @@
         <br><br>
             
 <div class="contenu text-left"> 
-            
+    <center class="numColor"> <?php echo utf8_encode($_GET['erreur']); ?> </center><br><br>
     <form class="form-horizontal" action="./authentification/auth.php" method="POST">
         <div class="form-group">
             <label class="control-label col-sm-5" for="usr">Nom d'utilisateur :</label>
                 <div class="col-sm-3">
-                <input name="login" type="text" class="form-control" id="usr" placeholder="Entrez votre nom d'utilisateur">
+                <input name="login" type="text" class="form-control" id="usr" placeholder="Entrez votre nom d'utilisateur" required>
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-5" for="pwd">Mot de passe:</label>
                 <div class="col-sm-3">
-                <input name="mdp" type="password" class="form-control" id="pwd" placeholder="Entrez votre mot de passe">
-            </div>
+                    <input name="mdp" type="password" class="form-control" id="pwd" placeholder="Entrez votre mot de passe">
+                    <a href="passe.php" ><small>Mot de passe oublié ?</small></a>
+                </div>
         </div>
-    
+
         <div class="form-group">
                 <div class="col-sm-offset-5 col-sm-3">
                 <button name="bouton1"type="submit" class="btn btn-default">Se connecter</button>
@@ -86,7 +86,7 @@
     <br>
         <div class="col-sm-offset-7 col-sm-5">
                 <div class="">
-                <a href="inscription.php" >Inscription</a>
+                <a class="btnDemandeInscription" href="inscription.php" >Demande d'inscription</a>
             </div>
             </div>
     </form> 
