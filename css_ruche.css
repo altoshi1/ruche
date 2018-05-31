@@ -1,4 +1,12 @@
- /* Remove the navbar's default margin-bottom and rounded borders */
+ 
+    /*fichier  connexion.php							    							
+   /* @auteur   Algin TOSHI (Touchard Washington le Mans)							
+   /* @date     Avril 2018															
+   /* @version  v1.0 - First release													
+   /* @details  Page de connexion											     		
+
+
+/* Remove the navbar's default margin-bottom and rounded borders */
 body {
     
   margin:0;
@@ -6,7 +14,7 @@ body {
   background: linear-gradient(
       rgba(0, 0, 0, 0.15), 
       rgba(0, 0, 0, 0.15)
-    ),url(https://wallpaperscraft.com/image/river_mountains_bottom_stones_brightly_sky_trees_grass_contrast_61512_3840x2400.jpg) no-repeat center fixed;
+    ),url(http://blog.hdwallsource.com/wp-content/uploads/2015/04/hdr-nature-wallpaper-38282-39157-hd-wallpapers.jpg) no-repeat center fixed;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: cover; /* version standardisée */
 
@@ -85,12 +93,18 @@ padding-top: 0px;
                     height: auto;
                     padding: 15px;
                   }
-                  .row.content {height:auto;} /
+                  .row.content {height:auto;
+                  } 
                 }
 
                 .numColor {
-                    
+                    margin-top: 20px;
                     color : #DF7401;
                     
                 }
 
+.alert-warning {
+    color: #DF7401;
+    background-color: #ffd83b1a;
+    border-color: #e8af2acc;
+}

@@ -1,67 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Ruche Connectée</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="css_ruche.css" rel="stylesheet" type="text/css"/>
-        <link rel="icon" type="image/png" href="//icon-icons.com/icons2/881/PNG/512/Honey_icon-icons.com_68739.png" />
-
-</head>
-
-<body>
-
-    <div class="bg">
-        <div id="titre" class="container text-center">
-        <h1>Ruche connectée <a href="#corpsPage"><img class="text-center iconFleche" src="image/flecheBas.png" alt=""/></a> </h1>
-        </div>
-    </div>
-   
-    
-<div class="container-fluid text-center">    
-<div class="row content">
-<div class="col-sm-1 sidenav"></div>
-
-<div class="col-sm-10 tab1" >
-        
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
-              </button>
-            </div>
-                
-            <div class="collapse navbar-collapse" id="myNavbar">
-                
-                <ul class="nav navbar-nav">
-                   <li ><a id="corpsPage" href="index.php">Accueil</a></li>
-                   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Ruche <span class="caret"></span></a>
-                    <ul class="dropdown-menu" >
-                    <li><a href="choixRuche.php">Ruche 1</a></li>
-                    <li><a href="choixRuche.php">Ruche 2</a></li>
-                    <li><a href="choixRuche.php">Ruche 3</a></li>
-                    </ul>
-                </ul>
-                
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="connexion.php"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
-                 
-                </ul>
-            </div>
-            </div>
-        </nav>
-        <br>
-                     <center><img class="miel" src="image/honey.png" alt=""/></center>
+<!----------------------------------------------------------------------------------
+    @fichier  connexion.php							    							|
+    @auteur   Algin TOSHI (Touchard Washington le Mans)								|
+    @date     Avril 2018															|
+  												|
+    @details  Page de demande d'inscription										     		|
+ 																				    |
+------------------------------------------------------------------------------------>
+<?php require 'corpsPages/header.php'; ?>
 
         <h1>Inscription
-        <small> <br/><br/>Merci de renseigner vos informations </small></h1>
+        <h5> <br/><br/>Merci de renseigner vos informations, l'administrateur verifiera les informations </h5></h1>
         <br>
       
         
@@ -127,16 +75,6 @@
     </div>
 </form> 
 </div>
-</div>
-    <div class="col-sm-1 sidenav"></div>
-</div>
-</div>
 
-                <footer>
-                                <div class="container text-center">
-                                <h4>Ruche connectée 2018 Toshi</h4>
-                                </div>
-                </footer>
 
-</body>
-</html>
+<?php require 'corpsPages/footer.php'; ?>
