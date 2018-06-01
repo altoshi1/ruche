@@ -121,7 +121,13 @@ require '../../corpsPages/headerApiculteur.php';
             <a name="boutonRuches" class="btn btn-default" href="consulterRuches.php">Vos ruches</a> 
             <a name="boutonCreer"class="btn btn-default" href="creerRuche.php">Créer une ruche</a> 
             <a name="boutonInfos" type="submit" class="btn btn-default" href="infosPerso.php">Informations personnelles</a> 
-            <a name="boutonAdmin" type="submit" class="btn btn-default" href="administrateur.php">Administration</a> 
+			     <?php if($_SESSION['auth']->droits == 0): ?>
+                        <a name="boutonAdmin" type="submit" class="btn btn-default" href="administrateur.php">Administration</a> 
+                    <?php else: ?>
+                     
+					   
+                    <?php endif; ?>	
+           
         </ul>
         </div>
 

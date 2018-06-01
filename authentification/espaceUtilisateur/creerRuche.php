@@ -8,7 +8,7 @@ if(!empty($_POST)){
      $message = array();
      require_once '../connexionBDD.php'; // Connexion à la bdd 
      $user_id = $_SESSION['auth']->idapiculteurs;
-     
+	 $droits  =	$_SESSION['auth']->droits;
     
   
    
@@ -40,14 +40,23 @@ if(!empty($_POST)){
 		$(function()	
 		{
                         geocoder = new google.maps.Geocoder() ;   // un ddécodeur d'adresse
-	  	       $("#adresse").click(function()
+					
+					
+	  	     
+			  $("#adresse").keyup(function()
 	   	   	{   
-	               	adresse     = $('#adresse').val()   ;              
+	                adresse     = $('#adresse').val()   ;     
+	                geocoder.geocode({'address':adresse},Analyse);// décodage de l'adresse           
+	  	          
+	  	    });
+			 $("#adresse").click(function()
+	   	   	{   
+	                adresse     = $('#adresse').val()   ;     
 	                geocoder.geocode({'address':adresse},Analyse);// décodage de l'adresse           
 	  	          
 	  	    });
 			
-		});        
+		});          
 
 		
 
@@ -96,14 +105,13 @@ if(!empty($_POST)){
                                         
                                         
                                         
-                                document.getElementById("longitude").value =  latlng.lng().toFixed(2) ;            
-                                document.getElementById("latitude").value =  latlng.lat().toFixed(2) ;                       
+                                document.getElementById("longitude").value =  latlng.lng().toFixed(6) ;            
+                                document.getElementById("latitude").value =  latlng.lat().toFixed(6) ;                       
                                         
                                         
 					});
              }
-             else 
-                alert("Le gÃ©ocodage n\'a pu Ãªtre effectuÃ© car: " + status);
+            
         }
 
 //affichage tableau données
@@ -120,7 +128,13 @@ if(!empty($_POST)){
             <a name="boutonRuches" class="btn btn-default" href="consulterRuches.php">Vos ruches</a> 
             <a name="boutonCreer"class="btn btn-default" href="creerRuche.php">Créer une ruche</a> 
             <a name="boutonInfos" type="submit" class="btn btn-default" href="infosPerso.php">Informations personnelles</a> 
-            <a name="boutonAdmin" type="submit" class="btn btn-default" href="administrateur.php">Administration</a> 
+			     <?php if($_SESSION['auth']->droits == 0): ?>
+                        <a name="boutonAdmin" type="submit" class="btn btn-default" href="administrateur.php">Administration</a> 
+                    <?php else: ?>
+                      
+					   
+                    <?php endif; ?>	
+           
         </ul>
         </div>
 

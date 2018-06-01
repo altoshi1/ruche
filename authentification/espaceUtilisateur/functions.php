@@ -15,3 +15,16 @@ function securisation(){
      exit();
     }
 }
+
+function securisationAdmin(){
+    if(session_status()== PHP_SESSION_NONE){
+    
+        session_start();
+    } 
+ if($_SESSION['auth']->droits != 0 ){
+     $_SESSION['flash']['securisation'] = "Vous n'êtes pas administrateur";
+     header('Location: /apiculteur.php');
+     exit();
+    }
+}
+

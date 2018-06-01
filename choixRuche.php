@@ -13,8 +13,8 @@
 <div id="graphique" style="padding: 5px;"></div>
 
                 <div id="date">
-                    <input type="text"  placeholder="Date de début" id="dateDeDebut"/>
-                    <input type="text"  placeholder="Date de fin" id="dateDeFin"/>
+                    <input type="text" name="debut" placeholder="Date de début" id="dateDeDebut"/>
+                    <input type="text" name="fin" placeholder="Date de fin" id="dateDeFin"/>
                 </div>
 
             
